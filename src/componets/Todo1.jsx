@@ -2,31 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import TodoEditDelete from "./TodoEditDelete";
 import './Todo.css'
 
-
-const getLocalItems = () =>{
-  // let list = localStorage.getItem('lists');
-  // if(list){
-  //   return JSON.parse(localStorage.getItem('lists'));
-  // } else {
-  //   return [];
-  // }
-  let list = sessionStorage.getItem('lists');
-  if(list){
-    return JSON.parse(sessionStorage.getItem('lists'));
-  } else {
-    return [];
-  }
-}
-
-
 function Todo() {
   const [inputData, setInputData] = useState("");
-  const [items, setItems] = useState(getLocalItems());
+  const [items, setItems] = useState([]);
   const [toggle, setToggle] = useState(true);
   const [edit, setEdit] = useState(null)
 
   const inputRef = useRef(null);
-  
+
   useEffect(() => {
     inputRef.current.focus();
   })
@@ -78,13 +61,6 @@ function Todo() {
     setItems([])
   }
 
-
- 
-  useEffect(()=>{
-    // localStorage.setItem('lists',JSON.stringify(items))
-    sessionStorage.setItem('lists',JSON.stringify(items))
-  },[items]);
-
   return (
     <div>
       <div className="main-div">
@@ -93,7 +69,7 @@ function Todo() {
         </div>
 
         <div className="input-data">
-        <div style={{backgroundColor:'rgb(24, 22, 22)'}}>
+          <div style={{ backgroundColor: 'rgb(24, 22, 22)' }}>
             <input
               type="text"
               placeholder="Enter a Day Work"
@@ -106,7 +82,7 @@ function Todo() {
             <button title="Add Iteam" onClick={addItems}> {toggle ? "Add-This-Item" : "Update-This-Item "}  </button>
           }
         </div>
-        <TodoEditDelete items={items} editItem={editItem} deleteItem={deleteItem} removeAll={removeAll}/>     
+        <TodoEditDelete items={items} editItem={editItem} deleteItem={deleteItem} removeAll={removeAll} />
       </div>
     </div>
   );

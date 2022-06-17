@@ -1,38 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Zilla+Slab:wght@300&display=swap');
-*{
+
+* {
     background-color: #abdbe3;
     font-family: 'Caveat', cursive;
     font-family: 'Zilla Slab', serif;
-    
-}   
-.main-div{
+
+}
+
+ul {
+    list-style: none;
+}
+
+.main-div {
     width: 525px;
     background-color: rgb(24, 22, 22);
-    margin: 50px auto;
+    margin: 50px auto 0;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
 }
-.hedding{
+
+.hedding {
     text-align: center;
     background-color: #0c4888;
     border-radius: 10px;
 }
-h1{
-    background-color:#0c4888;
+
+h1 {
+    background-color: #0c4888;
     margin: 15px;
     padding: 10px;
     color: white;
 }
-:placeholder-shown{
+
+:placeholder-shown {
     text-align: center;
 }
-.input-data{
+
+.input-data {
     display: flex;
     justify-content: space-between;
     margin-bottom: 18px;
     background-color: rgb(24, 22, 22);
 }
-input{
+
+input {
     width: 350px;
     border: none;
     background-color: white;
@@ -41,7 +52,8 @@ input{
     padding: 12px 15px;
     font-size: 22px;
 }
-button{
+
+button {
     padding: 12px;
     border-radius: 5px;
     background-color: #0c4888;
@@ -51,17 +63,20 @@ button{
     transition: 0.2s;
     color: wheat;
 }
-button:hover{
+
+button:hover {
     background: linear-gradient(to left, rgb(37, 114, 177), rgb(16, 66, 138));
     transform: scale(1.2);
 }
-.show-data{
+
+.show-data {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     word-wrap: break-word;
     background-color: rgb(24, 22, 22);
 }
-h3{
+
+h3 {
     text-align: left;
     background-color: #1864b6;
     color: white;
@@ -73,20 +88,67 @@ h3{
     font-size: 25px;
     transition: ease-in 0.5s;
 }
-h3:hover{
-    background: linear-gradient(to left, rgb(6, 68, 119) , rgb(13, 44, 85),rgb(6, 68, 119));
+
+h3:hover {
+    background: linear-gradient(to left, rgb(6, 68, 119), rgb(13, 44, 85), rgb(6, 68, 119));
     text-align: center;
     cursor: pointer;
 }
-.btn-show{
+
+.btn-show {
     background-color: rgb(24, 22, 22);
 }
-.btn-show button{
+
+.btn-show button {
     margin: 5px;
 }
-.del{
-   padding-top: 10px;
+
+.del {
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     background-color: rgb(24, 22, 22);
+}
+
+.show {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    margin: 0;
+}
+
+li {
+    width: 450px;
+    background: white;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.bot {
+    background-color: transparent;
+    display: flex;
+}
+
+.main-div-peta {
+    width: 525px;
+    background-color: rgb(24, 22, 22);
+    margin: auto;
+    margin-left: 361px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.update {
+    width: 525px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(24, 22, 22);
+}
+
+.bbb {
+    width: 100px;
+    height: 50px;
 }
