@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 const TodoList = () => {
 
     const state = useSelector((state) => ({ ...state.todos }));
+    console.log("state", state)
     let dispatch = useDispatch();
 
     const create = (newTodo) => {
@@ -26,20 +27,19 @@ const TodoList = () => {
             <TodoInput createTodo={create} />
             <ul className='show'>
                 <div className='main-div-peta '>
-                    {state.todos &&
-                        state.todos.map((todo) => {
-                            return (
-                                <Todo
-                                    key={todo.id}
-                                    id={todo.id}
-                                    task={todo.task}
-                                    completed={todo.completed}
-                                    toggleTodo={() => dispatch(completeTodo(todo))}
-                                    removeTodo={() => dispatch(removeTodo(todo))}
-                                    updateTodo={update}
-                                />
-                            )
-                        })}
+                    {state.todos && state.todos.map((todo) => {
+                        return (
+                            <Todo
+                                key={todo.id}
+                                id={todo.id}
+                                task={todo.task}
+                                completed={todo.completed}
+                                toggleTodo={() => dispatch(completeTodo(todo))}
+                                removeTodo={() => dispatch(removeTodo(todo))}
+                                updateTodo={update}
+                            />
+                        )
+                    })}
                 </div>
             </ul>
         </div>

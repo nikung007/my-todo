@@ -6,7 +6,7 @@ export const completeTodo = (todo) => ({
 });
 
 export const addTodo = (todo) => ({
-    type: types.ADD_TODO,
+    type: "ADD_TODO",
     payload: todo,
 });
 
